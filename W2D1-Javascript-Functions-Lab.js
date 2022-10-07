@@ -33,6 +33,39 @@ console.log(maxOfTwoNumbers(7,6))
 //2.
 // Define a function, as a function expression, maxOfThree that takes three numbers as arguments and returns the largest of them. Again, the Math.max method is not allowed.
 
+const maxOfThree = (x, y, z) => {
+    if ((x > y && x > z) || (x === y && x > z) || (x === z && x > y)) {
+        return x
+    } else if ((y > x && y > z) || (y === x && y > z) || (y === z && y > z)) {
+        return y
+    } else if ((z > x && z > y) || (z === x && z > y) || (z === y && z > x)) {
+        return z
+    } else if (x === y && x === z) {
+        return x
+    } else {
+        return x
+    }
+}
+
+console.log("Number 2 Solution:")
+
+console.log("Below will return x:")
+console.log(maxOfThree(5,4,3))
+console.log(maxOfThree(7,7,2))
+console.log(maxOfThree(9,4,9))
+
+console.log("Below will return y:")
+console.log(maxOfThree(9,10,8))
+console.log(maxOfThree(11,11,7))
+console.log(maxOfThree(10,15,15))
+
+console.log("Below will return z:")
+console.log(maxOfThree(9,10,22))
+console.log(maxOfThree(32,11,32))
+console.log(maxOfThree(15,18,18))
+
+console.log("Below will return same number if x = y = z:")
+console.log(maxOfThree(5,5,5))
 
 //3. 
 // Define a function, as a function declaration, isCharAVowel that takes a character as an argument and returns true if it is a vowel, false otherwise.
