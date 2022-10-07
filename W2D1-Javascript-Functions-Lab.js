@@ -90,7 +90,7 @@ console.log(isCharAVowel("x"))
 
 
 //4.
-// Define a function, as a function expression, sumArraythat takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
+// Define a function, as a function expression, sumArray that takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
 console.log("Number 4 Solution:")
 
 let sumArray = (arrayInput) => {
@@ -146,7 +146,35 @@ console.log(reverseStraight("I am writing this sentence backwards."))
 
 
 //8.
-// Define a function, as a function expression, longestStringInArraythat takes an array of strings as an argument and returns the length of the longest string.
+// Define a function, as a function expression, longestStringInArray that takes an array of strings as an argument and returns the length of the longest string.
+console.log("Number 8 Solution:")
+
+const longestStringInArray = (arrayStr) => {
+    let base = arrayStr[0]
+    for (i = 0; i < arrayStr.length; i++) {
+        if (arrayStr[i].length > base.length) {
+            base = arrayStr[i]
+        }
+    }
+    console.log(base.length)
+}
+
+longestStringInArray(["mom", "dad", "sister", "brother", "reallylongword"])
+
 
 //9.
-// Define a function, as a function declaration, stringsLongerThanthat takes an array of strings and a number as arguments, and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);would return ["hello", "morning"].
+// Define a function, as a function declaration, stringsLongerThan that takes an array of strings and a number as arguments, and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);would return ["hello", "morning"].
+console.log("Number 9 Solution:")
+
+function stringsLongerThan (arrayOfStrings, number) {
+    longerLengths = [];
+
+    arrayOfStrings.forEach((eachString) => {
+        if (eachString.length > number) {
+            longerLengths.push(eachString)
+        }
+    })
+    return longerLengths
+}
+console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3))
+
