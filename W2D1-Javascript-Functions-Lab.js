@@ -121,6 +121,14 @@ console.log(multiplyArray([2, 4, 5]))
 
 //6.
 // Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called.
+console.log("Number 6 Solution:")
+
+let numArgs = (...args) => {
+    return args.length
+}
+
+console.log(numArgs("a","b","c","d"))
+console.log(numArgs(1,2,3,4,5))
 
 
 //7.
