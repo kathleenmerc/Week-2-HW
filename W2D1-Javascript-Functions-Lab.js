@@ -10,17 +10,17 @@
 //     } else {
 //       return y;
 //     }
-  
+
 //     // or more "elegantly" using the fantastic ternary expression!
 //     // return  x >= y ? x : y;
 //   }
-  
+
 //   console.log(maxOfTwoNumbers(3, 9));
 
 //Solution 1b.
 console.log("Number 1 Solution:")
 
-function maxOfTwoNumbers (num1, num2) {
+function maxOfTwoNumbers(num1, num2) {
     if (num1 >= num2) {
         return num1
     } else if (num2 >= num1) {
@@ -28,7 +28,7 @@ function maxOfTwoNumbers (num1, num2) {
     }
 }
 
-console.log(maxOfTwoNumbers(7,6))
+console.log(maxOfTwoNumbers(7, 6))
 
 
 //2.
@@ -50,29 +50,29 @@ const maxOfThree = (x, y, z) => {
 }
 
 console.log("Below will return x:")
-console.log(maxOfThree(5,4,3))
-console.log(maxOfThree(7,7,2))
-console.log(maxOfThree(9,4,9))
+console.log(maxOfThree(5, 4, 3))
+console.log(maxOfThree(7, 7, 2))
+console.log(maxOfThree(9, 4, 9))
 
 console.log("Below will return y:")
-console.log(maxOfThree(9,10,8))
-console.log(maxOfThree(11,11,7))
-console.log(maxOfThree(10,15,15))
+console.log(maxOfThree(9, 10, 8))
+console.log(maxOfThree(11, 11, 7))
+console.log(maxOfThree(10, 15, 15))
 
 console.log("Below will return z:")
-console.log(maxOfThree(9,10,22))
-console.log(maxOfThree(32,11,32))
-console.log(maxOfThree(15,18,18))
+console.log(maxOfThree(9, 10, 22))
+console.log(maxOfThree(32, 11, 32))
+console.log(maxOfThree(15, 18, 18))
 
 console.log("Below will return same number if x = y = z:")
-console.log(maxOfThree(5,5,5))
+console.log(maxOfThree(5, 5, 5))
 
 
 //3. 
 // Define a function, as a function declaration, isCharAVowel that takes a character as an argument and returns true if it is a vowel, false otherwise.
 console.log("Number 3 Solution:")
 
-function isCharAVowel (character) {
+function isCharAVowel(character) {
     let lowerCaseCharacter = character.toLowerCase()
     if (lowerCaseCharacter === 'a' || lowerCaseCharacter === 'e' || lowerCaseCharacter === 'i' || lowerCaseCharacter === 'o' || lowerCaseCharacter === 'u') {
         return true
@@ -101,14 +101,14 @@ let sumArray = (arrayInput) => {
     return base
 }
 
-console.log(sumArray([2,4,5]))
+console.log(sumArray([2, 4, 5]))
 
 
 //5.
 // Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product of those numbers. For example, multiplyArray([2, 4, 5]);would return 40.
 console.log("Number 5 Solution:")
 
-function multiplyArray (arrayNumbers) {
+function multiplyArray(arrayNumbers) {
     let baseTwo = 1
     arrayNumbers.forEach((num) => {
         baseTwo = baseTwo * num
@@ -127,12 +127,22 @@ let numArgs = (...args) => {
     return args.length
 }
 
-console.log(numArgs("a","b","c","d"))
-console.log(numArgs(1,2,3,4,5))
+console.log(numArgs("a", "b", "c", "d"))
+console.log(numArgs(1, 2, 3, 4, 5))
 
 
 //7.
-// Define a function, as a function declaration, reverseStringthat takes a string, reverses the characters, and returns it. For example, reverseString('rockstar');would return the string "ratskcor".
+// Define a function, as a function declaration, reverseString that takes a string, reverses the characters, and returns it. For example, reverseString('rockstar');would return the string "ratskcor".
+console.log("Number 7 Solution:")
+
+function reverseStraight(str) {
+    return str
+        .split("")
+        .reverse()
+        .join("")
+}
+
+console.log(reverseStraight("I am writing this sentence backwards."))
 
 
 //8.
