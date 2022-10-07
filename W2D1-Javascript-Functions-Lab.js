@@ -90,8 +90,23 @@ console.log(isCharAVowel("x"))
 //4.
 // Define a function, as a function expression, sumArraythat takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
 
+let sumArray = (arrayInput) => {
+    let base = 0
+    arrayInput.forEach((nextIndex) => {
+        base += nextIndex
+    })
+    return base
+}
+
+console.log("Number 4 Solution:")
+console.log(sumArray([2,4,5]))
+
+
+
 //5.
-// Define a function, as a function declaration, multiplyArraythat takes an array of numbers and returns the product of those numbers. For example, multiplyArray([2, 4, 5]);would return 40.
+// Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product of those numbers. For example, multiplyArray([2, 4, 5]);would return 40.
+
+
 
 //6.
 // Define a function, as a function expression, numArgsthat returns the number of arguments passed to the function when called.
