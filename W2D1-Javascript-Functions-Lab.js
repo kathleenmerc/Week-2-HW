@@ -70,6 +70,22 @@ console.log(maxOfThree(5,5,5))
 //3. 
 // Define a function, as a function declaration, isCharAVowel that takes a character as an argument and returns true if it is a vowel, false otherwise.
 
+function isCharAVowel (character) {
+    let lowerCaseCharacter = character.toLowerCase()
+    if (lowerCaseCharacter === 'a' || lowerCaseCharacter === 'e' || lowerCaseCharacter === 'i' || lowerCaseCharacter === 'o' || lowerCaseCharacter === 'u') {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log("Number 3 Solution:")
+console.log(isCharAVowel("a"))
+console.log(isCharAVowel("E"))
+console.log(isCharAVowel("i"))
+console.log(isCharAVowel("O"))
+console.log(isCharAVowel("u"))
+console.log(isCharAVowel("x"))
 
 //4.
 // Define a function, as a function expression, sumArraythat takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]);would return 11.
