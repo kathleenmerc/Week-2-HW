@@ -124,6 +124,7 @@ martinYan.celebratesBirthday()
 martinYan.feelsMood()
 martinYan.cooking()
 martinYan.bakesCakes()
+<<<<<<< HEAD
 martinYan.specializes("Chinese")
 
 
@@ -203,3 +204,6 @@ anotherBankAccount.deposit(50)
 
 console.log(anotherBankAccount)
 anotherBankAccount.withdraw(50)
+=======
+martinYan.specializes("Chinese")
+>>>>>>> 50449dc47c53f9f3efb1a6365dc13237966cef2f
