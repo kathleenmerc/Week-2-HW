@@ -125,3 +125,81 @@ martinYan.feelsMood()
 martinYan.cooking()
 martinYan.bakesCakes()
 martinYan.specializes("Chinese")
+
+
+
+
+
+// Extra Credit: "Hungry for More - Bank Accounts"
+
+class BankAccount {
+    constructor (ownerName, balance, acctNum) {
+        this.ownerName = ownerName,
+        this.balance = balance,
+        this.acctNum = acctNum
+    }
+
+    deposit (amount) {
+        let newBalance = this.balance + amount
+        console.log(`${this.ownerName} would like to deposit ${amount} to account number: ${this.acctNum}. The new balance is ${newBalance}.`)
+    }
+
+    withdraw (amount) {
+        let newBalance = this.balance - amount
+        console.log(`${this.ownerName} would like to withdraw ${amount} from account number: ${this.acctNum}. The new balance is ${newBalance}.`)
+    }
+}
+
+
+
+class CheckingAccount extends BankAccount {
+    constructor(ownerName, balance, acctNum, overdraftEnabled) {
+        super(ownerName, balance, acctNum,)
+        this.overdraftEnabled = overdraftEnabled
+    }
+
+    withdraw (amount) {
+        if (this.overdraftEnabled === true) {
+            let newBalance = this.balance - amount
+            console.log(`Overdraft feature enabled. ${this.ownerName} would like to withdraw ${amount} from account number: ${this.acctNum}. The new balance is ${newBalance}.`)
+        } else {
+            super.withdraw(amount)
+        }
+    }
+}
+
+class SavingsAccount extends BankAccount {
+    withdraw () {
+        console.log(`Withdrawals are not enabled at this time.`)
+    } 
+}
+
+console.log(BankAccount)
+console.log(CheckingAccount)
+console.log(SavingsAccount)
+
+
+const myCheckingAccountOne = new CheckingAccount ("Kathleen", 100, 1234567890, true)
+console.log(myCheckingAccountOne)
+myCheckingAccountOne.withdraw(500)
+
+
+
+const myCheckingAccountTwo = new CheckingAccount ("Sarah", 500, 25346985, false)
+console.log(myCheckingAccountTwo)
+myCheckingAccountTwo.withdraw(25)
+
+
+
+const mySavingsAccount = new SavingsAccount ("Joseph", 800, 9876543210)
+console.log(mySavingsAccount)
+mySavingsAccount.withdraw(75)
+
+
+
+const anotherBankAccount = new BankAccount ("Chris", 700, 74839285)
+console.log(anotherBankAccount)
+anotherBankAccount.deposit(50)
+
+console.log(anotherBankAccount)
+anotherBankAccount.withdraw(50)
