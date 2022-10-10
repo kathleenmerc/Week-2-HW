@@ -177,4 +177,3 @@ function stringsLongerThan (arrayOfStrings, number) {
     return longerLengths
 }
 console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3))
-
